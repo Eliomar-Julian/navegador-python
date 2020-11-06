@@ -6,7 +6,7 @@ from PySide2.QtCore import Qt
 from PySide2.QtGui import QIcon
 
 
-class Search(QFrame):
+class TopoBusca(QFrame):
     def __init__(self, parent=None):
         self.mae = parent
         QFrame.__init__(self, self.mae)
@@ -67,3 +67,25 @@ class Search(QFrame):
 
     def retorna_url(self):
         return self.busca.text()
+
+
+class BuscaUrl:
+    def __init__(self, master, objeto):
+        self.ObjectWidgets = objeto
+        self.master = master
+        url = self.ObjectWidgets[
+            'pesquisa' + str(self.master.CounterTabs - 1)
+            ].retorna_url()
+        if '.' in url and len(url) > 3:
+            if 'http' not in url:
+                self.ObjectWidgets[
+                    'webengine' + str(self.master.CounterTabs - 1)
+                    ].setUrl(f'http://{url}')
+            else:
+                self.ObjectWidgets[
+                    'webengine' + str(self.master.CounterTabs - 1)
+                    ].setUrl(url)
+        else:
+            self.ObjectWidgets[
+                'webengine' + str(self.master.CounterTabs - 1)
+                ].setUrl(f'https://www.google.com/search?q={url}')

@@ -1,8 +1,9 @@
-from PySide2.QtWebEngineWidgets import QWebEngineView, QWebEnginePage
+from PySide2.QtWebEngineWidgets import (
+    QWebEngineView, QWebEnginePage
+)
 from PySide2.QtWidgets import QAction
 from json import load
 from PySide2.QtCore import QThread
-from pesquisa import Search
 import os
 
 
@@ -24,7 +25,7 @@ class WebEngine(QWebEngineView):
             web = self.page().requestedUrl().toString()
             os.system(f'start pythonw.exe main.py "{web}"')
             
-    # // manipula o menu de contexto original ////////////////////////////////
+    # // manipula o menu de contexto original e traduz
 
     def contextMenuEvent(self, event):
         self.teste = QAction('teste', self)
