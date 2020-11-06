@@ -1,0 +1,13 @@
+{
+  "contextMenu":
+    {
+      "Back": "Voltar", "Forward":  "Avançar", "Reload": "Recarregar", "''": "",
+      "Save page": "Salvar Página", "Open link in new tab":  "Abrir link em uma nova aba",
+      "Open link in new window": "Abrir link em uma nova janela", "Save link": "Salvar link",
+      "Copy link address":  "Copiar endereço do link", "Save image":  "Salvar Imagem",
+      "Copy image":  "Copiar imagem", "Copy image address": "Copiar endereço da imagem",
+      "View page source": "Ver código da página", "Cut": "Recortar", "Copy": "Copiar",
+      "Undo": "Desfazer", "Redo": "Refazer", "Paste": "Colar",
+      "Paste and match style": "Colar e manter o estilo", "Select all": "Selecionar Tudo"
+    }
+}
