@@ -23,7 +23,7 @@ class WebEngine(QWebEngineView):
             self.master.comecar(self.page().requestedUrl())
         elif tipo == self.page().WebBrowserWindow:
             web = self.page().requestedUrl().toString()
-            os.system(f'start pythonw.exe main.py "{web}"')
+            os.system(f'start pythonw.exe ./src/main.py "{web}"')
             
     # // manipula o menu de contexto original e traduz
 

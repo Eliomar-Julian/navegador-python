@@ -1,0 +1,1 @@
+start pythonw.exe .\src\main.py
