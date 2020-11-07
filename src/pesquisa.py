@@ -73,9 +73,9 @@ class BuscaUrl:
     def __init__(self, master, objeto):
         self.ObjectWidgets = objeto
         self.master = master
-        url = self.ObjectWidgets[
-            'pesquisa' + str(self.master.CounterTabs - 1)
-            ].retorna_url()
+        url = self.ObjectWidgets['pesquisa' + str(
+            self.master.CounterTabs - 1)].retorna_url(
+        )
         if '.' in url and len(url) > 3:
             if 'http' not in url:
                 self.ObjectWidgets[
